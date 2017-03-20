@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>happy birthday joey</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color: #FF00FF;
+      background-image: url("bg.jpg");
+      background-position: left bottom;
+      background-attachment: fixed;
+      background-size: 100vw 100vh;
+      background-color: #42f456;
+    }
+
+    .ugh {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+    }
+
+    h1 {
+      margin: auto;
+    }
+
+    h3 {
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="ugh">
+    <h1><strong>happy birthday, joey</strong></h1>
+
+    <h3><strong>press any keyboard key</strong></h3>
+  </div>
+
+  <script>
+  const pressed = [];
+  const secretCode = '';
+
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if (pressed.join('').includes(secretCode)) {
+      console.log('DING DING!');
+      cornify_add();
+    }
+  });
+  </script>
+</body>
+</html>
