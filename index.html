@@ -37,7 +37,7 @@
   <div class="ugh">
     <h1><strong>happy birthday, joey</strong></h1>
 
-    <h3><strong>press any keyboard key</strong></h3>
+    <h3><strong>click or press any key okay thank you</strong></h3>
   </div>
 
   <script>
@@ -45,14 +45,29 @@
   const secretCode = '';
 
   window.addEventListener('keyup', (e) => {
-    console.log(e.key);
-    pressed.push(e.key);
-    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-    if (pressed.join('').includes(secretCode)) {
-      console.log('DING DING!');
-      cornify_add();
-    }
+    cornify_add();
   });
+
+  window.addEventListener('click', (e) => {
+    cornify_add();
+  });
+
+  console.log(`%c ________________________________________
+< yeahhhhhhhhhhhhhh >
+ ----------------------------------------
+    \\.
+     \\'.      ;.
+      \\ '. ,--''-.~-~-'-,
+       \\,-' ,-.   '.~-~-~~,
+     ,-'   (###)    \\-~'~=-.
+ _,-'       '-'      \\=~-"~~',
+/o                    \\~-""~=-,
+\__                    \\=-,~"-~,
+   """===-----.         \\~=-"~-.
+               \\         \\*=~-"
+                \\         "=====----
+                 \\
+                  \\`, "font-family:monospace")
   </script>
 </body>
 </html>
